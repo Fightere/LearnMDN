@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .opt{
+            background-color: lightblue;
+            color: #a00000;
+            font-size: 15px;
+        }
+
+        a:hover{
+            background-color: blue;
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <select name="simple" id="simple">
+            <a href=""><option value="Banana">Banana</option></a>
+            <option value="Cherry">Cherry</option>
+            <option value="Lemon">Lemon</option>
+        </select>
+
+        <br>
+
+        <select name="groups" id="groups">
+            <optgroup label="fruits">
+                <option class="opt" value="Banana">Banana</option>
+                <option class="opt" value="Cherry" selected>Cherry</option>
+                <option class="opt" value="Lemon">Lemon</option>
+            </optgroup>
+            <optgroup label="vegetables">
+                <option class="opt" value="Carrot">Carrot</option>
+                <option class="opt" value="Eggplant">Eggplant</option>
+                <option class="opt" value="Potato">Potato</option>
+            </optgroup>
+        </select>
+
+        <br>
+
+        <select name="multi" id="multi" multiple>
+            <option value="Banana">Banana</option>
+            <option value="Cherry">Cherry</option>
+            <option value="Lemon">Lemon</option>
+        </select>
+
+        <br>
+
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+
+        <datalist id="mySuggestion">
+            <option value="Apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Blackberry">Blackberry</option>
+            <option value="Blueberry">Blueberry</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Lychee">Lychee</option>
+            <option value="Peach">Peach</option>
+            <option value="Pear">Pear</option>
+        </datalist>
+
+        <br>
+
+        <label for="myFruit">What is your favorite fruit?(With fallback)</label>
+        <input type="text" name="fruit" id="myFruit" list="fruitList">
+
+        <datalist id="fruitList">
+            <label for="suggestion">or pick a fruit</label>
+            <select name="altFruit" id="suggestion">
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Blackberry">Blackberry</option>
+                <option value="Blueberry">Blueberry</option>
+                <option value="Lemon">Lemon</option>
+                <option value="Lychee">Lychee</option>
+                <option value="Peach">Peach</option>
+                <option value="Pear">Pear</option>
+            </select>
+        </datalist>
+    </form>
+</body>
+</html>
